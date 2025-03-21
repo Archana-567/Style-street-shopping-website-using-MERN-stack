@@ -1,0 +1,69 @@
+1.in frontend folder,to create a basic direcorty structure, follow below steps:
+   "npx create-react-app ."
+after the above step, the react project has been created.
+then install react-router-dom package
+To run the project use command: "npm start".
+in src folder, create three folders, components context pages.
+create assests folder in components folder
+Components folder:
+Navbar Component:
+  1. create Navbar folder nd create Navbar.jsx nd Navbar.css files in that folder
+  (note: after creating any component: first import the css file of that component in jsx file)
+  2. in app.jsx file mount the navbar.jsx
+  3.in assests folder we have all_product.js file. this file contains all  the product data in json format.
+   total we have 36 product's data available
+  4. create a use state to the li items in navbar, such that when u click on shop the line comes on shop,when u click on men the line shold come on men.
+
+  NOte: useState is a tool in React that lets you add state (like data or values) to functional components. Before useState, only class components could manage state. Now, you can use it in functional components to make them more powerful and dynamic.
+
+  add google fonts for the project. in public folder in index.html , paste the link of the style u want to include.
+  then include the css property in index.css,i.e, under body add font-family: 'poppins'
+
+
+create pages folder.
+shop page is our home page.
+
+in app.jsx we will set up routes nad link that with navbar.jsx by importing BrowserRouter, Router,Route
+in the function App() include the <BrowserRouter> component.
+
+after including the data in route and routes component, go to navbar.jsx and link these.
+
+create hero component in components folder. import this hero component in shop page, because that is the home page
+
+create item folder in components.
+create popular component.
+create offers component
+create new collections component
+create newsletter component
+create footer component
+now create a shopcontext.jsx file in context folder
+why context api is used?
+.Context API helps you share data between different parts of your app without having to pass it down through every single component.
+Why Use It:
+Avoid Passing Props Everywhere: Imagine you have a big app with many layers of components. Without Context API, you'd have to pass data (like user info or theme) through every level of components, even if they don't need it. This is called prop drilling.
+then make all_product.js available to all the pages in the website. the component we create here is ShopContextProvider
+now we will create shopcategory page
+now we will create login signup page
+create product page
+create productdisplay component where we get to display all the deailts about the product when clicked and mount this compponent
+create descriptionbox.jsx and mount it in product page
+create relatedproduct.jsx 
+now create logic for cart 
+for that first we have to write the code in shopconxtext nad then use the all_product,cartItems,removeFromCart uisng the usecontext(ShopCOntext) in cartItems components.
+make the website resposive using media queries
+ 1.for navbar.css. 
+   make a menu links for navbar when size of screen is so small
+2.item.css
+3.hero.css
+4.popular.css
+5.offers.css
+6.newcollectins.css
+7.newsletter.css
+8.footer.css
+9.shopcategroy page 
+10.login-signup page
+  for these pages we create another folder called css in pages folder.
+11.breadcrumb.css
+12.productdisplay.css
+13.cartitems.css
+
